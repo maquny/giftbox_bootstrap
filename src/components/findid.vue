@@ -7,7 +7,7 @@
 				<b-form-group
 				id="input-group-phone"
 				label="가입 당시 인증받은 휴대전화 번호를 통해 아이디를 찾을 수 있습니다."
-				label-for="input-1"
+				label-for="input-phone"
 				description="본인 명의의 휴대폰으로 인증해주세요."
 				>
 				<b-form-input

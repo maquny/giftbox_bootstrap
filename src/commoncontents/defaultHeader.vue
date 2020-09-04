@@ -9,7 +9,7 @@
                         <router-link to="/Hello">마이페이지</router-link>
                         <transition name="fade">
                             <ul v-if="listOne" @click="listOne = false">
-                                <li><router-link to="/Hello">판매123거래내역</router-link></li>
+                                <li><router-link to="/Hello">판매거래내역</router-link></li>
                                 <li><router-link to="/Hello">계좌인증 관리</router-link></li>
                                 <li><router-link to="/Hello">개인정보 관리</router-link></li>
                                 <li><router-link to="/Hello">판매한도 관리</router-link></li>

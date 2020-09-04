@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" name="pageName">
         <defaultHeader />
         <router-view />
         <defaultFooter />

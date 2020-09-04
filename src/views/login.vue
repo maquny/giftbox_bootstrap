@@ -17,8 +17,15 @@
 			</successfindid>
 		</div>
 
-		<div v-show="pageName =='passwordRe'">
-			<loginFrom />
+		<div v-show="pageName =='resetPassword'">
+			<resetPassword>
+				<h3>비밀번호 재설정</h3>
+			</resetPassword>
+		</div>
+		<div v-show="pageName =='successfindidDepth2'">
+			<successfindidDepth2>
+				<h3>비밀번호 재설정</h3>
+			</successfindidDepth2>
 		</div>
 	</div>
 </template>
@@ -27,6 +34,8 @@
 	import loginFrom from '@/components/loginFrom'
 	import findId from '@/components/findid'
 	import successfindid from '@/components/successfindid'
+	import resetPassword from '@/components/resetPassword'
+	import successfindidDepth2 from '@/components/successfindidDepth2'
 
 	export default{
 		name: 'login',
@@ -39,7 +48,9 @@
 		components: {
 			loginFrom,
 			findId,
-			successfindid
+			successfindid,
+			resetPassword,
+			successfindidDepth2
 		},
 		computed: {
 			param: function () {

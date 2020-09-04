@@ -4,12 +4,12 @@
 		<b-form @submit="onSubmit">
 			<div class="from_1box">
 				<b-form-group
-				id="input-group-1"
+				id="input-group-id"
 				label="아이디"
-				label-for="input-1"
+				label-for="input-id"
 				>
 				<b-form-input
-				id="input-1"
+				id="input-id"
 				v-model="form.id"
 				type="email"
 				required
@@ -17,13 +17,17 @@
 				></b-form-input>
 				</b-form-group>
 
-				<b-form-group id="input-group-2" label="비밀번호" label-for="input-2">
-					<b-form-input
-					id="input-2"
-					v-model="form.password"
-					required
-					placeholder="비밀번호를 입력해주세요."
-					></b-form-input>
+				<b-form-group 
+				id="input-group-password" 
+				label="비밀번호" 
+				label-for="input-password"
+				>
+				<b-form-input
+				id="input-password"
+				v-model="form.password"
+				required
+				placeholder="비밀번호를 입력해주세요."
+				></b-form-input>
 				</b-form-group>
 
 				<b-button type="submit" variant="primary" class="login_btn">로그인</b-button>
@@ -36,8 +40,8 @@
 
 		<div class="user_infor">
 			<router-link to="/login/findId">아이디 찾기</router-link>
-			<router-link to="/Hello/passwordRe">비밀번호 재설정</router-link>	
-			<router-link to="/Hello" class="sign_up_btn">회원가입</router-link>	
+			<router-link to="/login/resetPassword">비밀번호 재설정</router-link>	
+			<router-link to="/sginup" class="sign_up_btn">회원가입</router-link>	
 		</div>
 		
 		<b-card class="mt-3" header="Form Data Result">
