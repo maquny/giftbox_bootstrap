@@ -1,5 +1,7 @@
 <template>
 	<div class="login_container" name="pageName">
+parameter : {{param}}
+pageName : {{pageName}}
 
 		<div v-show="pageName ==undefined">
 			<loginFrom>
@@ -18,15 +20,20 @@
 		</div>
 
 		<div v-show="pageName =='resetPassword'">
-			<resetPassword>
+			<resetPassword :pageName="pageName">
 				<h3>비밀번호 재설정</h3>
 			</resetPassword>
 		</div>
 		<div v-show="pageName =='successfindidDepth2'">
-			<successfindidDepth2>
+			<successfindidDepth2 :pageName="pageName">
 				<h3>비밀번호 재설정</h3>
 			</successfindidDepth2>
 		</div>
+
+		<b-card class="mt-3" header="Form Data Result">
+			<pre class="m-0">{{ pageName }}</pre>
+		</b-card>
+		
 	</div>
 </template>
 
@@ -55,6 +62,7 @@
 		computed: {
 			param: function () {
 				this.pageName = this.$route.params.page
+				return this.$route.params;
 			}
 		},
 		watch: {

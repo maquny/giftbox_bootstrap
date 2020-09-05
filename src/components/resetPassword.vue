@@ -5,6 +5,7 @@
 			아래 정보 확인 후 비밀번호를 재설정하세요.<br/>
 			비밀번호는 고객센터에서 안내 또는 수정이 불가합니다
 		</div>
+
 		<b-form @submit="phoneSubmit" name="pageName">
 			<div class="from_2box">
 				<b-form-group

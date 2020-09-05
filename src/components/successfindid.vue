@@ -6,7 +6,7 @@
 			<h5>abc****@gmail.com <br/>입니다.</h5>
 			<h6>(가입일 : yyyy년 mm월 dd일)</h6>
 		</div>
-
+{{pageName}}
 		<div class="success_btn">
 			<router-link to="/login">로그인</router-link>
 			<router-link to="/Hello">비밀번호 찾기</router-link>

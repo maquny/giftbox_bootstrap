@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<slot></slot>
-		
+
 		<b-form @submit="phoneSubmit" name="pageName">
 			<div class="from_2box">
 				<b-form-group
