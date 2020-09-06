@@ -1,31 +1,21 @@
-<template>
-  <div>
-  <b-button v-b-modal.modal-1>hellohellohellohello</b-button>
-
-  <b-modal id="modal-1" title="BootstrapVue">
-    <p class="my-4">Hello from modal!</p>
-  </b-modal>
-  
-</div>
-</template>
-
-<script>
-  
-  export default {
-    data() {
-      return {
-        dismissSecs: 10,
-        dismissCountDown: 0,
-        showDismissibleAlert: false
-      }
-    },
-    methods: {
-      countDownChanged(dismissCountDown) {
-        this.dismissCountDown = dismissCountDown
-      },
-      showAlert() {
-        this.dismissCountDown = this.dismissSecs
-      }
-    }
-  }
+<template> 
+  <ckeditor :editor="editor" v-model="editorData" :config="editorConfig" /> 
+</template> 
+<script> 
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic' 
+import CKEditor from '@ckeditor/ckeditor5-vue' 
+export default { 
+name: 'CKEditor', 
+  components: {
+    ckeditor: CKEditor.component 
+  }, data: () => ({ 
+    editor: ClassicEditor, 
+    editorData: '<p>Content of the editor.</p>', 
+    editorConfig: { 
+      // The configuration of the editor. 
+      height: '500px', 
+      language: 'ko' 
+    } 
+  }) 
+} 
 </script>

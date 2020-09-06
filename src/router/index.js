@@ -16,6 +16,12 @@ Vue.use(VueRouter)
     name: 'About',
     component: () => import('@/views/About.vue'),
   },
+  ,
+  {
+    path: '/Hello',
+    name: 'Hello',
+    component: () => import('@/views/Hello.vue'),
+  },
   {
     path: '/login/:page?',
     name: 'login',
