@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <mainBanner />
-    <containerArea />
+    <containerArea/> 
+    <!-- msg="Welcome to Your Vue.js App" -->
   </div>
 </template>
 

@@ -9,8 +9,13 @@ import device from "vue-device-detector"
 import VueMq from "vue-mq"
 import CKEditor from '@ckeditor/ckeditor5-vue';
 
-Vue.use( CKEditor );
+import { Swiper as SwiperClass, Pagination, Mousewheel, Autoplay } from 'swiper/swiper.esm'
+import getAwesomeSwiper from 'vue-awesome-swiper/dist/exporter'
+SwiperClass.use([Pagination, Mousewheel, Autoplay])
+Vue.use(getAwesomeSwiper(SwiperClass))
+Vue.use( getAwesomeSwiper );
 
+Vue.use( CKEditor );
 Vue.use(VueMq, {
 	breakpoints: {
 		mobile: 460,

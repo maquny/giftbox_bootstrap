@@ -1,6 +1,6 @@
 <template>
     <div class="defaultHeader" :class="$mq">
-        <div class="header_cont">
+        <b-container class="header_cont">
             <router-link to="/" class="logo"><img alt="Vue logo" :src="logoImg"></router-link>
             <div class="menu">
                 <ul>
@@ -34,7 +34,7 @@
                 <router-link to="/login">로그아웃</router-link>
                 <router-link to="/Hello">회원가입</router-link>
             </div>
-        </div>
+        </b-container>
     </div>
 </template>
 
@@ -74,7 +74,7 @@
 .defaultHeader.mobile{width:100%;}
 .box{width:100px;height:100px;background-color:#ccc;}
 .defaultHeader{}
-.header_cont{width:1200px;margin:0 auto;padding:20px 0;}
+.header_cont{margin:0 auto;padding:20px 0;}
 .header_cont:after{content:'';display:block;clear:both;}
 .logo{float:left;}
 .logo img{width:180px;}
