@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import BootstrapVue from 'bootstrap-vue'
+import { BootstrapVue, BIcon, BIconX, BIconList  } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import device from "vue-device-detector"
@@ -27,6 +27,9 @@ Vue.use(VueMq, {
 
 Vue.use(device)
 Vue.use(BootstrapVue)
+Vue.component('BIcon', BIcon)
+Vue.component('BIconList', BIconList)
+Vue.component('BIconX', BIconX)
 
 Vue.config.productionTip = false
 
@@ -34,6 +37,11 @@ new Vue({
   router,
   store,
   template: '<App/>',
+  components: {
+    BIcon,
+    BIconList,
+    BIconX
+  },
   render: h => h(App)
 }).$mount('#app')
 
