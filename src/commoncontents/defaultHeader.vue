@@ -46,7 +46,7 @@
 
                                 </div>
                                 <div class="m_menu_b">
-                                    <router-link to="/Hello">로그인</router-link>
+                                    <router-link to="/login">로그인</router-link>
                                     <router-link to="/Hello">회원가입</router-link>
                                 </div>
                             </div>

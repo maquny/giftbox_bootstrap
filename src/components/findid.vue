@@ -31,9 +31,7 @@
 			<p>* 휴대폰 인증은 본인 명의의 휴대폰으로만 인증이 가능합니다. (14세 미만 이용 불가)</p>
 			<p>* 인증이 되지 않을 경우, 고객센터(1:1문의 바로가기)로 문의 하시기 바랍니다.</p>
 		</div>
-		<b-card class="mt-3" header="Form Data Result">
-			<pre class="m-0">{{ form }}</pre>
-		</b-card>
+
 	</div>
 </template>
 <script>

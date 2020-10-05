@@ -1,8 +1,5 @@
 <template>
-	<div class="login_container" name="pageName">
-parameter : {{param}}
-pageName : {{pageName}}
-
+	<div class="login_container col-md-5" name="pageName" :type="param">
 		<div v-show="pageName ==undefined">
 			<loginFrom>
 				<h3>로그인</h3>
@@ -29,11 +26,6 @@ pageName : {{pageName}}
 				<h3>비밀번호 재설정</h3>
 			</successfindidDepth2>
 		</div>
-
-		<b-card class="mt-3" header="Form Data Result">
-			<pre class="m-0">{{ pageName }}</pre>
-		</b-card>
-		
 	</div>
 </template>
 
@@ -65,6 +57,9 @@ pageName : {{pageName}}
 				return this.$route.params;
 			}
 		},
+		methods: {
+		},
+
 		watch: {
 			pageName: function (val) {
 				console.log(val)
@@ -74,5 +69,5 @@ pageName : {{pageName}}
 </script>
 
 <style>
-.login_container{width:450px;margin:0 auto;padding:100px 0;}
+.login_container{margin:0 auto;padding:100px 0;}
 </style>

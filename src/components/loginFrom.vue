@@ -43,10 +43,7 @@
 			<router-link to="/login/resetPassword">비밀번호 재설정</router-link>	
 			<router-link to="/sginup" class="sign_up_btn">회원가입</router-link>	
 		</div>
-		
-		<b-card class="mt-3" header="Form Data Result">
-			<pre class="m-0">{{ form }}</pre>
-		</b-card>
+	
 	</div>
 </template>
 <script>
