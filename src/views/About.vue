@@ -1,16 +1,17 @@
 <template>
-    <div class="swiper_test">
-       sdasd
-    </div>
+  <div class="About">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'carrousel',
-    }
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'
 
+export default {
+  name: 'About',
+  components: {
+    HelloWorld
+  }
+}
 </script>
-
-<style>
-
-</style>

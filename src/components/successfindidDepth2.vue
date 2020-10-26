@@ -45,7 +45,7 @@
 </template>
 <script>
 	export default{
-		name: 'resetpassword',
+		name: 'successfindidDepth2',
 		data() {
 			return {
 				form: {

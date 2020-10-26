@@ -2,19 +2,22 @@
   <div class="home">
     <mainBanner />
     <containerArea/> 
-    <!-- msg="Welcome to Your Vue.js App" -->
   </div>
 </template>
 
 <script>
-import mainBanner from '@/components/mainBanner'
-import containerArea from '@/components/containerArea'
+import mainBanner from '@/components/home/mainBanner'
+import containerArea from '@/components/home/containerArea'
 
 export default {
   name: 'Home',
   components: {
     mainBanner,
     containerArea
+  },
+  created() {
+    // 환경 변수 출력
+    console.log(process.env.VUE_APP_BASE_URL);
   }
 }
 </script>

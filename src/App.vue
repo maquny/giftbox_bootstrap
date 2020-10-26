@@ -6,10 +6,10 @@
     </div>
 </template>
 <script>
-    import defaultHeader from '@/commoncontents/defaultHeader.vue'
-    import defaultFooter from '@/commoncontents/defaultFooter.vue'
+    import defaultHeader from '@/components/layout/defaultHeader.vue'
+    import defaultFooter from '@/components/layout/defaultFooter.vue'
     export default {
-        name: 'Home',
+        name: 'app',
         components: {
             defaultHeader,
             defaultFooter,

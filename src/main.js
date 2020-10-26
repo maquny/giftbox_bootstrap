@@ -8,18 +8,23 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import device from "vue-device-detector"
 import VueMq from "vue-mq"
 import CKEditor from '@ckeditor/ckeditor5-vue';
+import VueCookie from 'vue-cookie'
+import axios from "axios"
 
 import { Swiper as SwiperClass, Pagination, Mousewheel, Autoplay } from 'swiper/swiper.esm'
 import getAwesomeSwiper from 'vue-awesome-swiper/dist/exporter'
+
+Vue.prototype.$axios = axios
+
 SwiperClass.use([Pagination, Mousewheel, Autoplay])
 Vue.use(getAwesomeSwiper(SwiperClass))
 Vue.use( getAwesomeSwiper );
-
+Vue.use( VueCookie );
 Vue.use( CKEditor );
+
 Vue.use(VueMq, {
 	breakpoints: {
 		mobile: 460,
-		table: 900,
 		laptop: 1250,
 		desktop: Infinity,
 	}
