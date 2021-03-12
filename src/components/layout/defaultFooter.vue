@@ -1,29 +1,27 @@
 <template>
-    <div class="defaultFooter">
+    <div id="defaultFooter" class="defaultFooter" :class='{ hidden_cont: not_footer }'>
 
         <div class="footer_sub_infor">
             <b-container>
                 <div class="footer_infor_menu">
-                    <router-link to="/about">공지사항</router-link>
-                    <router-link to="/about">FAQ</router-link>
-                    <router-link to="/about">이메일 문의</router-link>
+                    <router-link to="/board">공지사항</router-link>
+                    <router-link to="/board/frequentlyAskedQuestions">FAQ</router-link>
+                    <a :href="'mailto:' + email">이메일 문의</a>
                 </div>
             </b-container>
         </div>
 
         <b-container class="footer_company">
             <div class="footer_company_top after">
-                <div class="f_logo"><router-link to="/about"><img alt="Vue logo" :src="logoImg"></router-link></div>
+                <div class="f_logo"><router-link to="/"><img alt="Vue logo" :src="logoImg"></router-link></div>
                 <div class="terms_menu after">
-                    <router-link to="/about">이용약관</router-link>
-                    <router-link to="/about">개인정보처리방침</router-link>
+                    <router-link to="/terms/termsOfUse">이용약관</router-link>
+                    <router-link to="/terms">개인정보처리방침</router-link>
                 </div>
             </div>
             <div class="footer_company_bottom">
-                <router-link to="/about">(주)아워펀</router-link>
-                사업자등록번호 : 000-00-00000 / 통신판매업신고 : 제 2020-서울OO-0000<br/>
-                경기도 성남시 분당구 000 00 0000 (주)아워펀 (대표자 : 홍길동)<br/>
-                고객센터 help@abcde.fgh
+                사업자등록번호 : 357-86-01817 | 서울시 강남구 강남대로84길 24-4, 2층 LS68호 (역삼동)
+                체육시간 주식회사 대표이사 : 공영식 | 고객센터 : cs@makepin.co.kr
             </div>
         </b-container>
     </div>
@@ -34,18 +32,42 @@
         name: 'defaultFooter',
         data() {
             return {
-                logoImg: require('@/assets/images/logo.png'),
+                logoImg: require('@/assets/images/main_pin_flogo.png'),
+                not_footer: false,
+                email: 'help@abcde.fgh'
+            }
+        },
+        created() {
+            this.diveceHiddenChecked()
+        },
+        methods: {
+            diveceHiddenChecked(){
+                if(this.$route.name == 'signUp' || this.$route.name == 'logInFrom' || this.$route.name == 'signUpComplete' || this.$route.name == 'signUpUserFrom' || this.$route.name == 'findId' || this.$route.name == 'resetPassWord'){
+                    this.not_footer = true;
+                } else {
+                    this.not_footer = false;
+                }
+            }
+        },
+        watch: {
+            $route (data){
+                this.diveceHiddenChecked();
+            },
+
+            not_footer(params){
+                this.diveceHiddenChecked();
             }
         }
     }
 </script>
 
-<style scoped>footer_company
+<style scoped>
 .after:after{content:'';display:block;clear:both;}
-.defaultFooter{border-top:solid 1px #ccc;}
-.footer_sub_infor{border-bottom:solid 1px #ccc;}
+.defaultFooter{border-top:solid 1px #eee;}
+.defaultFooter.hiddenCont{display:none;}
+.footer_sub_infor{border-bottom:solid 1px #eee;}
 .footer_infor_menu{margin:0 auto;text-align:right;}
-.footer_infor_menu a{display:inline-block;padding:10px;color:#444;font-size:.85em;}
+.footer_infor_menu a{display:inline-block;padding:10px;color:#666;font-size:.85em;position:relative;}
 .footer_infor_menu a:first-child:after,
 .terms_menu a:first-child:after{display:none;}
 .footer_infor_menu a:after,
@@ -61,7 +83,7 @@
 .terms_menu a:after{content:'';display:block;clear:both;width:1px;height:14px;background-color:#ccc;position:absolute;top:50%;left:0;margin-top:-7px;}
 .terms_menu a:first-child:after{display:none;}
 .footer_company_bottom{font-size:.75em;color:#777;line-height:1.5em;}
-
+.hidden_cont{display:none;}
 @media screen and (max-width: 760px){
     .footer_company_bottom a{display:block;}
 }

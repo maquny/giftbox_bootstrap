@@ -17,7 +17,10 @@ export default [
             {
                 path: 'signUpUserFrom',
                 name: 'signUpUserFrom',
-                component: signUpUserFrom
+                component: signUpUserFrom,
+                query:{
+                    idx: [],
+                }
             },
             {
                 path: 'signUpAgreeMent',

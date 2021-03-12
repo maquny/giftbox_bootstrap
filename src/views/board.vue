@@ -1,6 +1,5 @@
 <template>
-	<div class="login_container col-md-5">
-		<h2>{{ $route.name }}</h2>
+	<div>
 		<router-view></router-view>
 	</div>
 </template>
